@@ -1,0 +1,49 @@
+<h1 id="lesson-4">Lesson 4</h1>
+
+<p><img src="01.png" alt="01" title=""></p>
+
+
+
+<h2 id="ez-proxy-log-files">EZ proxy Log Files</h2>
+
+<p>The great thing about OpenRefine is that it can understand a wide variety of different types of input files</p>
+
+<p>In this lesson we are going to look a (purposefully obscured) snapshot of an ezproxy log file</p>
+
+
+
+<h3 id="step-1">Step 1</h3>
+
+<p>Download this <a href="./clf_mod.txt">text</a> file and have a look at it in your text editor.</p>
+
+<p><em>Please Note!</em>Sorry, I have some reservation posting one of our log files even if it was anonymized. If you have EZproxy running you should be able to grab a recent logfile and do the same activities.</P>
+
+<p>we will need to understand before we get into the lesson is what an IP address looks like. Basically it looks like:</p>
+
+<p><img src="02.png" alt="02" title=""></p>
+
+<p>The number dot notation essentially creates your unique address on the web so that web content can be delivered right to you. <br>
+It is also handy because most IP address have been tied to physical locations. <br>
+Big institutions often have a <em>block</em> of IP addresses that follow a larger pattern</p>
+
+<p>EZproxy logs everything into a structure called CLF (<em>Common Log Format</em>) and this is standard seen in many different web applications. <br>
+Apache for example. <br>
+Here is a capture of two lines from that file.</p>
+
+<p><img src="03.png" alt="03" title=""></p>
+
+
+
+<h3 id="step-2">Step 2</h3>
+
+<p>Load the file into Refine and split it into columns based on spaces</p>
+
+
+
+<h3 id="step-3">Step 3</h3>
+
+<ul>
+<li>Based on Column 2 how many individual sessions were there</li>
+<li>Our pretend campus is located at IP address 439.62.*.* how many requests came from that IP address Range?</li>
+<li>By mangling the last column can you create a list of traffic that was just to <em>www.tanfonline.com</em> and <em>scholar.google.com</em> (Hint, excesive use of split is required). How many users was this? Can you see any other interesting info?</li>
+</ul>
